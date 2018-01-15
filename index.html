@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html ng-app="app">
+
 <head>
 	<meta charset="UTF-8">
 	<title>other project one</title>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" href="css/fontawesome/font-awesome.min.css">
-	<link rel="stylesheet" href="js/Plagins/magnific-popup/magnific-popup/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/blog_item.css">
 	<link rel="stylesheet" href="css/modal_style.css">
 	<link rel="stylesheet" href="css/contacts.css">
 	<link rel="stylesheet" href="css/gallery_css.css">
-	<link rel="stylesheet" href="js/Plagins/owl_carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/slider_one_css.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/css_about.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page">
 	<header class="header">
 		<div class="page__row">
@@ -24,7 +25,7 @@
 							<p>Главная</p>
 						</div>
 					</a>
-					<a href="index.html?page=blog" class="link">
+					<a ui-sref="blog" class="link">
 						<div class="nav__item">
 							<p>Блог</p>
 						</div>
@@ -49,35 +50,33 @@
 	<footer class="footer">
 		<div class="page__row">
 			<div class="page__cell">
-				<hr>
-				footer
+				<hr> footer
 			</div>
 		</div>
 	</footer>
-<script type="text/javascript" src="script/app.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script/app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+	<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+	
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/about/about.controller.js"></script>
+	<script type="text/javascript" src="js/contacts/contacts.controller.js"></script>
+	<script type="text" src="js/blog/blog.controller.js"></script>
+	<script type="text" src="js/gallery/gallery.controller.js"></script>
+	
+	
+	<script type="text/javascript" src="js/directive/modal.directive.js"></script>
+	<script type="text/javascript" src="script/modal.js"></script>
+	
+	
+	
+	
+	<script type="text/javascript" src="js/service/blog.service.js"></script>
+	<script type="text/javascript" src="js/service/service.gallery.js"></script>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
-<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-<script type="text/javascript" src="js/angular/app.js"></script>
-<script type="text/javascript" src="js/angular/about/about.view.controller.js"></script>
-<script type="text/javascript" src="js/angular/contacts/contacts.view.controller.js"></script>
-<script type="text/javascript" src="js/angular/directive/modal.directive.js"></script>
-<script type="text/javascript" src="js/angular/service/service.gallery.js"></script>
-
-
-
-<script type="text/javascript" src="script/script_about.js"></script>
-<script type="text/javascript" src="script/modal2.js"></script>
-<script type="text/javascript" src="script/jQuery/modal.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="script/contacts__validate.js"></script>
-<script type="text/javascript" src="js/Plagins/magnific-popup/magnific-popup/jquery.magnific-popup.js"></script>
-
-<script type="text/javascript" src="script/gallery_popup.js"></script>
-<script type="text/javascript" src="js/Plagins/owl_carousel/owl.carousel.min.js"></script>
-<script type="text/javascript" src="script/carousel_script.js"></script>
 </body>
+
 </html>

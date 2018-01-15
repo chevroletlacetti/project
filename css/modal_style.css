@@ -12,16 +12,21 @@
 }
 #modal{
 	display: inline-block;
-	margin: 13% 5%;
-	max-height: 60%;
+	position: fixed;
+	top: 10%;
+	left: 20%;
+	right: 20%;
+	bottom: 10%;
 }
-#modal .blog__item{
+#modal .blog__item,
+#modal .blog-content{
 	max-width: 100%;
 	background-color: rgba(55, 55, 55, 1);
 	color: white;
 	overflow: auto;
 	border-radius: 20px;
-	max-height: 500px;
+	max-height: 90%;
+	padding: 1rem;
 }
 #modal a.close{
 	float: right;

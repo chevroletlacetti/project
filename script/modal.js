@@ -18,7 +18,7 @@
 		}
 
 		var $content = $(this).clone();
-		if (currentSettings.onRenderContent){
+		if (currentSettings.onRenderContent) {
 			$content = currentSettings.onRenderContent($content);
 		}
 
