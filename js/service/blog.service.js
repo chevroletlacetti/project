@@ -11,15 +11,15 @@
 		var service = {
 			getBlogItems: function (successCallback) {
 				$http({
-					url: appSettings.baseApiUrl + 'blog-items',
-					method: 'GET'
-				})
+						url: appSettings.baseApiUrl + 'blog-items',
+						method: 'GET'
+					})
 					.then(function (response) {
-					successCallback(response.data);
-				})
+						successCallback(response.data);
+					})
 			}
 		};
 
-	return service;
-}
+		return service;
+	}
 })();
