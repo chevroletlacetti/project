@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>other project one</title>
@@ -19,7 +19,7 @@
 		<div class="page__row">
 			<div class="page__cell">
 				<nav class="nav">
-					<a href="index.html?page=about" class="link">
+					<a ui-sref="about" class="link">
 						<div class="nav__item">
 							<p>Главная</p>
 						</div>
@@ -29,12 +29,12 @@
 							<p>Блог</p>
 						</div>
 					</a>
-					<a href="index.html?page=gallery" class="link">
+					<a ui-sref="gallery" class="link">
 						<div class="nav__item">
 							<p>Галерея</p>
 						</div>
 					</a>
-					<a href="index.html?page=contacts" class="link">
+					<a ui-sref="contacts" class="link">
 						<div class="nav__item">
 							<p>Контакты</p>
 						</div>
@@ -44,7 +44,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</header>
-	<article class="article" id="content">
+	<article class="article" id="content" ui-view>
 	</article>
 	<footer class="footer">
 		<div class="page__row">
@@ -56,12 +56,26 @@
 	</footer>
 <script type="text/javascript" src="script/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/angular/app.js"></script>
+<script type="text/javascript" src="js/angular/about/about.view.controller.js"></script>
+<script type="text/javascript" src="js/angular/contacts/contacts.view.controller.js"></script>
+<script type="text/javascript" src="js/angular/directive/modal.directive.js"></script>
+<script type="text/javascript" src="js/angular/service/service.gallery.js"></script>
+
+
+
 <script type="text/javascript" src="script/script_about.js"></script>
 <script type="text/javascript" src="script/modal2.js"></script>
 <script type="text/javascript" src="script/jQuery/modal.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="script/contacts__validate.js"></script>
 <script type="text/javascript" src="js/Plagins/magnific-popup/magnific-popup/jquery.magnific-popup.js"></script>
+
 <script type="text/javascript" src="script/gallery_popup.js"></script>
 <script type="text/javascript" src="js/Plagins/owl_carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="script/carousel_script.js"></script>
