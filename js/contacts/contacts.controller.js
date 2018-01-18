@@ -1,22 +1,50 @@
 (function () {
-
-
-	$.validator.addMethod('tel', function (value, element) {
-		return /\+\d{3}\(\d{2}\)\d{3}-\d{2}-\d{2}/g.test(value);
-	});
+	'use strict';
 	angular
 		.module('app')
 		.controller('contactsController', contactsController);
 
-	function contactsController($http) {
-		$scope.send = function () {
-			$http({
-				url: appSettings.baseApiUrl + 'messages',
-				method: 'POST',
-				data: {
-					name: $scope.model
+	contactsController.$inject = ['$scope', 'contactsService'];
+
+	function contactsController($scope, contactsService) {
+		$scope.validationOptions = {
+			rules: {
+				phone: {
+					tel: true,
+					required: true
+				},
+				name: {
+					required: true
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				message: {
+					required: true
 				}
-			})
+			}
+		};
+
+		$scope.send = function (form) {
+			if (!form.validate()) {
+				return false;
+			}
+
+			contactsSirvice.send({
+					name: $scope.model.name,
+					phone: $scope.model.phone,
+					email: $scope.model.email,
+					message: $scope.model.message
+				},
+				function () {
+					$scope.messageSent = true;
+				}
+			);
+		}
+		$scope.reset = function () {
+			$scope.model = {};
+			$scope.messageSent = false;
 		}
 	}
 })();
